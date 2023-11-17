@@ -8,6 +8,9 @@ export default class GameArea {
     goblinImg.classList.add('area__img');
     goblinImg.src = 'https://github.com/netology-code/ahj-homeworks/raw/AHJ-50/dom/pic/goblin.png';
     goblinImg.alt = 'Гоблин';
+    const goblinDiv = document.createElement('div');
+    goblinDiv.classList.add('area__img-wrapper');
+    goblinDiv.append(goblinImg);
 
     const area = document.querySelectorAll('.area__item');
 
@@ -19,6 +22,6 @@ export default class GameArea {
 
     const randomCell = Math.floor(Math.random() * area.length);
 
-    area[randomCell].append(goblinImg);
+    area[randomCell].append(goblinDiv);
   }
 }
